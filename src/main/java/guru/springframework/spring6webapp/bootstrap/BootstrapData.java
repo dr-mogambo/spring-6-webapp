@@ -16,6 +16,7 @@ public class BootstrapData implements CommandLineRunner {
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
 
+    // with the constuctor it will auto wire the implementations of the repositories
     public BootstrapData(AuthorRepository authorRepository, BookRepository bookRepository) {
         this.authorRepository = authorRepository;
         this.bookRepository = bookRepository;
@@ -55,16 +56,5 @@ public class BootstrapData implements CommandLineRunner {
         System.out.println("Author Count: " + authorRepository.count());
         System.out.println("Book Count: " + bookRepository.count());
 
-
     }
 }
-
-
-
-
-
-
-
-
-
-
